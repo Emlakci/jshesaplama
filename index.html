@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mevduat Hesaplama</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <nav id="navbar">
+        <div>
+            <img src="worm.jpg" class="logo">
+            <p><a class="logonm" href="index.html">HESABI ALALIM.COM</a></p>    
+        </div>
+        
+        <ul>
+            <li><a href="index.html"><span class="material-symbols-outlined">cottage</span></a></li>
+            <li><a href="index.html">Mevduat Hesapla</a></li>
+            <li><a href="area.html">Alan Hesapla</a></li>
+            <li><a href="#">Bunu Hesapla</a></li>
+            <li><a href="#">Şunu Hesapla</a></li>            
+        </ul>
+    </nav>
+    <h1> 💵 YATIRBANK 💶 <h4>Paranızı Huzurla Yatırın</h4></h1>
+    <div class="main">
+        <div class="container">
+            <div class="box">
+                <span>Mevduat Türü : </span>
+                <select name="deposit_type" id="deposit_type">
+                    <option value="0" selected disabled>Mevduat Türü Seçiniz!</option>
+                    <option value="1">E-Vadeli Mevduat</option>
+                    <option value="2">Hoşgeldin Faizli Mevduat</option>
+                </select>
+            </div>
+            <div class="box">
+                <span>Para Birimi : </span>
+                <select name="money_unit" id="money_unit">
+                    <option selected value="0" disabled>Para Birimi Seçiniz!</option>
+                    <option value="1">TL (🇹🇱)</option>
+                    <option value="2">USD (💲)</option>
+                    <option value="3">EURO (💶)</option>
+                </select>
+            </div> 
+            <div class="box">
+                <span>Yatırılacak Tutar : </span>
+                <input type="number" id="deposit_amount" placeholder="Mevduat miktarı giriniz!!" required>
+            </div>   
+            <div class="box">
+                <span>Vade Gün Sayısı : </span>
+                <input type="number" id="maturity_days" placeholder="Vade gün süresi giriniz!!" required><br>
+            </div>
+            <hr style="width:100%;">
+            <div class="oprtr_contnr">
+                <button class="btn" type="button" onclick="clearAll()"> TEMİZLE </button>
+                <button class="btn" type="button" onclick="getValue()"> HESAPLA </button>
+            </div>   
+        </div>
+
+        <div class="container result" name="result_area">
+            <div class="box">
+                <span>Faiz Getirisi : </span>
+                <input type="number" id="maturity_dis" value="" disabled><br>
+                <span>Vade Sonu Toplam Tutar : </span>
+                <input type="number" id="total_dis" value="" disabled>
+            </div>    
+        </div>
+    </div>    
+    <script src="main.js"></script>
+</body>
+</html>
